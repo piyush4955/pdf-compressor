@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Compressor - Reduce PDF File Size Easily</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span>PDF</span>Compressor
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#compress">Compress PDF</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Compress PDF Files <span class="highlight">Easily</span></h1>
+                <p>Reduce the size of your PDF files without losing quality. Fast, secure, and free!</p>
+                <a href="#compress" class="btn primary-btn">Compress Now</a>
+                <a href="#features" class="btn secondary-btn">Learn More</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-illustration.svg" alt="PDF Compression Illustration" class="illustration">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Why Choose Our PDF Compressor</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Compress your PDFs in seconds with our optimized compression algorithm.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Your files are processed locally in your browser. No uploads to our servers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality Preserved</h3>
+                    <p>Maintain document quality while reducing file size significantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Works Offline</h3>
+                    <p>Once loaded, our tool works without an internet connection.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3>Upload PDF</h3>
+                    <p>Select your PDF file or drag and drop it into the upload area.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Choose Settings</h3>
+                    <p>Select your preferred compression level and quality settings.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-compress-alt"></i>
+                    </div>
+                    <h3>Compress</h3>
+                    <p>Click the compress button and wait for the process to complete.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Download</h3>
+                    <p>Download your compressed PDF file and enjoy the reduced size.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compress PDF Section -->
+        <section id="compress" class="compress-section">
+            <h2>Compress Your PDF Now</h2>
+            <div class="compress-container">
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Drag & Drop Your PDF Here</h3>
+                    <p>or</p>
+                    <label for="file-input" class="btn primary-btn">Browse Files</label>
+                    <input type="file" id="file-input" accept=".pdf" hidden>
+                </div>
+                
+                <div class="compression-options" id="compression-options" style="display: none;">
+                    <h3>Compression Settings</h3>
+                    <div class="option-group">
+                        <label for="compression-level">Compression Level:</label>
+                        <select id="compression-level">
+                            <option value="low">Low (Better Quality)</option>
+                            <option value="medium" selected>Medium (Balanced)</option>
+                            <option value="high">High (Smaller Size)</option>
+                        </select>
+                    </div>
+                    <button id="compress-btn" class="btn primary-btn">Compress PDF</button>
+                </div>
+                
+                <div class="compression-progress" id="compression-progress" style="display: none;">
+                    <h3>Compressing...</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <p id="progress-text">0%</p>
+                </div>
+                
+                <div class="compression-result" id="compression-result" style="display: none;">
+                    <div class="result-icon success">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Compression Complete!</h3>
+                    <div class="file-info">
+                        <div class="file-size-comparison">
+                            <div class="original-size">
+                                <p>Original Size</p>
+                                <h4 id="original-size">0 MB</h4>
+                            </div>
+                            <div class="size-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="new-size">
+                                <p>New Size</p>
+                                <h4 id="new-size">0 MB</h4>
+                            </div>
+                        </div>
+                        <p class="reduction">Reduced by <span id="reduction-percentage">0%</span></p>
+                    </div>
+                    <button id="download-btn" class="btn primary-btn">Download Compressed PDF</button>
+                    <button id="compress-another-btn" class="btn secondary-btn">Compress Another PDF</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>PDF</span>Compressor
+            </div>
+            <p>A free tool to compress PDF files while maintaining quality.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">© 2023 PDFCompressor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- PDF.js Library for PDF processing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
